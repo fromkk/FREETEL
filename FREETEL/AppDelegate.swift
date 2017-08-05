@@ -7,16 +7,52 @@
 //
 
 import UIKit
+import Contacts
+import ContactsUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    lazy var tabBarController: UITabBarController = UITabBarController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .white
+        window?.rootViewController = self.tabBarController
+        window?.makeKeyAndVisible()
+        
+        self.requestAuthorization(with: CNContactStore.authorizationStatus(for: .contacts))
+        
         return true
+    }
+    
+    private func requestAuthorization(with status: CNAuthorizationStatus) {
+        switch status {
+        case .authorized:
+            self.createViewControllers()
+        case .denied, .restricted:
+            break
+        case .notDetermined:
+            let store = CNContactStore()
+            store.requestAccess(for: CNEntityType.contacts, completionHandler: { [weak self] (_, _) in
+                DispatchQueue.main.async {
+                    self?.requestAuthorization(with: CNContactStore.authorizationStatus(for: .contacts))
+                }
+            })
+        }
+    }
+    
+    private func createViewControllers() {
+        
+        let historyViewController = HistoryViewController()
+        let historyNavigationController = UINavigationController(rootViewController: historyViewController)
+        historyNavigationController.tabBarItem.title = "History"
+        
+        self.tabBarController.viewControllers = [historyNavigationController]
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -43,4 +79,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0D915C1F35ED2B0065966A /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0D915B1F35ED2B0065966A /* NSLayoutConstraint+Extensions.swift */; };
+		AD0D915E1F35F0E50065966A /* HistoryViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0D915D1F35F0E50065966A /* HistoryViewController+Extensions.swift */; };
+		AD0D91601F35F6BF0065966A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0D915F1F35F6BF0065966A /* String+Extensions.swift */; };
+		AD0D91621F35F9550065966A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0D91611F35F9550065966A /* Constants.swift */; };
 		ADDC42F81F35DD2A008DABD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC42F71F35DD2A008DABD7 /* AppDelegate.swift */; };
-		ADDC42FA1F35DD2A008DABD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC42F91F35DD2A008DABD7 /* ViewController.swift */; };
-		ADDC42FD1F35DD2A008DABD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDC42FB1F35DD2A008DABD7 /* Main.storyboard */; };
 		ADDC42FF1F35DD2A008DABD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDC42FE1F35DD2A008DABD7 /* Assets.xcassets */; };
 		ADDC43021F35DD2A008DABD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDC43001F35DD2A008DABD7 /* LaunchScreen.storyboard */; };
 		ADDC430D1F35DD2A008DABD7 /* FREETELTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC430C1F35DD2A008DABD7 /* FREETELTests.swift */; };
 		ADDC43181F35DD2A008DABD7 /* FREETELUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC43171F35DD2A008DABD7 /* FREETELUITests.swift */; };
+		ADDC43281F35DDA3008DABD7 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDC43261F35DDA3008DABD7 /* ContactsUI.framework */; };
+		ADDC43291F35DDA3008DABD7 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDC43271F35DDA3008DABD7 /* Contacts.framework */; };
+		ADDC432D1F35E1F8008DABD7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC432C1F35E1F8008DABD7 /* HistoryViewController.swift */; };
+		ADDC43341F35E85C008DABD7 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDC43321F35E85B008DABD7 /* Realm.framework */; };
+		ADDC43351F35E85C008DABD7 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDC43331F35E85B008DABD7 /* RealmSwift.framework */; };
+		ADDC43381F35E874008DABD7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC43371F35E874008DABD7 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD0D915B1F35ED2B0065966A /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
+		AD0D915D1F35F0E50065966A /* HistoryViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryViewController+Extensions.swift"; sourceTree = "<group>"; };
+		AD0D915F1F35F6BF0065966A /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		AD0D91611F35F9550065966A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ADDC42F41F35DD2A008DABD7 /* FREETEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FREETEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDC42F71F35DD2A008DABD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADDC42F91F35DD2A008DABD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ADDC42FC1F35DD2A008DABD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADDC42FE1F35DD2A008DABD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDC43011F35DD2A008DABD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADDC43031F35DD2A008DABD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +57,12 @@
 		ADDC43131F35DD2A008DABD7 /* FREETELUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FREETELUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDC43171F35DD2A008DABD7 /* FREETELUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FREETELUITests.swift; sourceTree = "<group>"; };
 		ADDC43191F35DD2A008DABD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADDC43261F35DDA3008DABD7 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		ADDC43271F35DDA3008DABD7 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		ADDC432C1F35E1F8008DABD7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		ADDC43321F35E85B008DABD7 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		ADDC43331F35E85B008DABD7 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		ADDC43371F35E874008DABD7 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDC43341F35E85C008DABD7 /* Realm.framework in Frameworks */,
+				ADDC43351F35E85C008DABD7 /* RealmSwift.framework in Frameworks */,
+				ADDC43281F35DDA3008DABD7 /* ContactsUI.framework in Frameworks */,
+				ADDC43291F35DDA3008DABD7 /* Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +101,7 @@
 				ADDC430B1F35DD2A008DABD7 /* FREETELTests */,
 				ADDC43161F35DD2A008DABD7 /* FREETELUITests */,
 				ADDC42F51F35DD2A008DABD7 /* Products */,
+				ADDC43251F35DDA3008DABD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +118,11 @@
 		ADDC42F61F35DD2A008DABD7 /* FREETEL */ = {
 			isa = PBXGroup;
 			children = (
+				ADDC43361F35E869008DABD7 /* Models */,
+				ADDC432E1F35E242008DABD7 /* Extensions */,
+				ADDC432B1F35E1E8008DABD7 /* Contacts */,
+				ADDC432A1F35E198008DABD7 /* Supports */,
 				ADDC42F71F35DD2A008DABD7 /* AppDelegate.swift */,
-				ADDC42F91F35DD2A008DABD7 /* ViewController.swift */,
-				ADDC42FB1F35DD2A008DABD7 /* Main.storyboard */,
 				ADDC42FE1F35DD2A008DABD7 /* Assets.xcassets */,
 				ADDC43001F35DD2A008DABD7 /* LaunchScreen.storyboard */,
 				ADDC43031F35DD2A008DABD7 /* Info.plist */,
@@ -125,6 +148,51 @@
 			path = FREETELUITests;
 			sourceTree = "<group>";
 		};
+		ADDC43251F35DDA3008DABD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC43321F35E85B008DABD7 /* Realm.framework */,
+				ADDC43331F35E85B008DABD7 /* RealmSwift.framework */,
+				ADDC43271F35DDA3008DABD7 /* Contacts.framework */,
+				ADDC43261F35DDA3008DABD7 /* ContactsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADDC432A1F35E198008DABD7 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				AD0D91611F35F9550065966A /* Constants.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		ADDC432B1F35E1E8008DABD7 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC432C1F35E1F8008DABD7 /* HistoryViewController.swift */,
+				AD0D915D1F35F0E50065966A /* HistoryViewController+Extensions.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		ADDC432E1F35E242008DABD7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD0D915B1F35ED2B0065966A /* NSLayoutConstraint+Extensions.swift */,
+				AD0D915F1F35F6BF0065966A /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADDC43361F35E869008DABD7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC43371F35E874008DABD7 /* History.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +203,7 @@
 				ADDC42F01F35DD2A008DABD7 /* Sources */,
 				ADDC42F11F35DD2A008DABD7 /* Frameworks */,
 				ADDC42F21F35DD2A008DABD7 /* Resources */,
+				ADDC43311F35E810008DABD7 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -231,7 +300,6 @@
 			files = (
 				ADDC43021F35DD2A008DABD7 /* LaunchScreen.storyboard in Resources */,
 				ADDC42FF1F35DD2A008DABD7 /* Assets.xcassets in Resources */,
-				ADDC42FD1F35DD2A008DABD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +319,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ADDC43311F35E810008DABD7 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADDC42F01F35DD2A008DABD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADDC42FA1F35DD2A008DABD7 /* ViewController.swift in Sources */,
 				ADDC42F81F35DD2A008DABD7 /* AppDelegate.swift in Sources */,
+				AD0D915C1F35ED2B0065966A /* NSLayoutConstraint+Extensions.swift in Sources */,
+				AD0D915E1F35F0E50065966A /* HistoryViewController+Extensions.swift in Sources */,
+				ADDC432D1F35E1F8008DABD7 /* HistoryViewController.swift in Sources */,
+				AD0D91621F35F9550065966A /* Constants.swift in Sources */,
+				AD0D91601F35F6BF0065966A /* String+Extensions.swift in Sources */,
+				ADDC43381F35E874008DABD7 /* History.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +385,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADDC42FB1F35DD2A008DABD7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADDC42FC1F35DD2A008DABD7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADDC43001F35DD2A008DABD7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -424,6 +508,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FREETEL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FREETEL;
@@ -438,6 +526,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FREETEL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FREETEL;
