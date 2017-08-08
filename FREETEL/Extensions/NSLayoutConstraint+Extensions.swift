@@ -13,4 +13,9 @@ extension NSLayoutConstraint {
         self.priority = priority
         return self
     }
+    
+    func constant(_ constant: CGFloat) -> NSLayoutConstraint {
+        self.constant = constant
+        return self
+    }
 }

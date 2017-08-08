@@ -51,7 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let historyNavigationController = UINavigationController(rootViewController: historyViewController)
         historyNavigationController.tabBarItem.title = "History"
         
-        self.tabBarController.viewControllers = [historyNavigationController]
+        let dialViewController = DialViewController()
+        let dialNavigationController = UINavigationController(rootViewController: dialViewController)
+        dialNavigationController.tabBarItem.title = "Dial"
+        
+        self.tabBarController.viewControllers = [historyNavigationController, dialNavigationController]
         
     }
 

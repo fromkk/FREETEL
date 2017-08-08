@@ -11,6 +11,7 @@
 		AD0D915E1F35F0E50065966A /* HistoryViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0D915D1F35F0E50065966A /* HistoryViewController+Extensions.swift */; };
 		AD0D91601F35F6BF0065966A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0D915F1F35F6BF0065966A /* String+Extensions.swift */; };
 		AD0D91621F35F9550065966A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0D91611F35F9550065966A /* Constants.swift */; };
+		ADBEDB721F3939FD008B720F /* DialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBEDB711F3939FD008B720F /* DialViewController.swift */; };
 		ADDC42F81F35DD2A008DABD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC42F71F35DD2A008DABD7 /* AppDelegate.swift */; };
 		ADDC42FF1F35DD2A008DABD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDC42FE1F35DD2A008DABD7 /* Assets.xcassets */; };
 		ADDC43021F35DD2A008DABD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDC43001F35DD2A008DABD7 /* LaunchScreen.storyboard */; };
@@ -46,6 +47,7 @@
 		AD0D915D1F35F0E50065966A /* HistoryViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryViewController+Extensions.swift"; sourceTree = "<group>"; };
 		AD0D915F1F35F6BF0065966A /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		AD0D91611F35F9550065966A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ADBEDB711F3939FD008B720F /* DialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialViewController.swift; sourceTree = "<group>"; };
 		ADDC42F41F35DD2A008DABD7 /* FREETEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FREETEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDC42F71F35DD2A008DABD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADDC42FE1F35DD2A008DABD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADBEDB6F1F3939DC008B720F /* HistoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC432C1F35E1F8008DABD7 /* HistoryViewController.swift */,
+				AD0D915D1F35F0E50065966A /* HistoryViewController+Extensions.swift */,
+			);
+			path = HistoryViewController;
+			sourceTree = "<group>";
+		};
+		ADBEDB701F3939EC008B720F /* DialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEDB711F3939FD008B720F /* DialViewController.swift */,
+			);
+			path = DialViewController;
+			sourceTree = "<group>";
+		};
 		ADDC42EB1F35DD2A008DABD7 = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +139,7 @@
 			children = (
 				ADDC43361F35E869008DABD7 /* Models */,
 				ADDC432E1F35E242008DABD7 /* Extensions */,
-				ADDC432B1F35E1E8008DABD7 /* Contacts */,
+				ADDC432B1F35E1E8008DABD7 /* ViewControllers */,
 				ADDC432A1F35E198008DABD7 /* Supports */,
 				ADDC42F71F35DD2A008DABD7 /* AppDelegate.swift */,
 				ADDC42FE1F35DD2A008DABD7 /* Assets.xcassets */,
@@ -167,13 +186,13 @@
 			path = Supports;
 			sourceTree = "<group>";
 		};
-		ADDC432B1F35E1E8008DABD7 /* Contacts */ = {
+		ADDC432B1F35E1E8008DABD7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ADDC432C1F35E1F8008DABD7 /* HistoryViewController.swift */,
-				AD0D915D1F35F0E50065966A /* HistoryViewController+Extensions.swift */,
+				ADBEDB701F3939EC008B720F /* DialViewController */,
+				ADBEDB6F1F3939DC008B720F /* HistoryViewController */,
 			);
-			path = Contacts;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		ADDC432E1F35E242008DABD7 /* Extensions */ = {
@@ -347,6 +366,7 @@
 				AD0D915C1F35ED2B0065966A /* NSLayoutConstraint+Extensions.swift in Sources */,
 				AD0D915E1F35F0E50065966A /* HistoryViewController+Extensions.swift in Sources */,
 				ADDC432D1F35E1F8008DABD7 /* HistoryViewController.swift in Sources */,
+				ADBEDB721F3939FD008B720F /* DialViewController.swift in Sources */,
 				AD0D91621F35F9550065966A /* Constants.swift in Sources */,
 				AD0D91601F35F6BF0065966A /* String+Extensions.swift in Sources */,
 				ADDC43381F35E874008DABD7 /* History.swift in Sources */,
