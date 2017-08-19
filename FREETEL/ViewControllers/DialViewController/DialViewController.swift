@@ -10,7 +10,8 @@ import UIKit
 
 class DialViewController: UIViewController {
     
-    private var buttonSize: CGFloat = (320.0 - (8.0 * 4.0)) / 3.0
+    private let margin: CGFloat = 32.0
+    private lazy var buttonSize: CGFloat = (320.0 - (margin * 4.0)) / 3.0
     
     lazy var phoneNumberLabel: UILabel = { () -> UILabel in
         let label: UILabel = UILabel()
@@ -41,6 +42,16 @@ class DialViewController: UIViewController {
         return button
     }()
     
+    lazy var deleteButton: UIButton = { () -> UIButton in
+        let button: UIButton = UIButton(type: .custom)
+        button.setTitle("x", for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24.0)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(DialViewController.handle(deleteButton:)), for: .touchUpInside)
+        return button
+    }()
+    
     override func loadView() {
         super.loadView()
         
@@ -57,6 +68,9 @@ class DialViewController: UIViewController {
         
         self.view.addSubview(self.callButton)
         self.layoutCallButton()
+        
+        self.view.addSubview(self.deleteButton)
+        self.layoutDeleteButton()
     }
 }
 
@@ -65,7 +79,7 @@ extension DialViewController {
     private func layoutPhoneNumberLabel() {
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self.phoneNumberLabel, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 1.0, constant: -32.0).priority(.defaultHigh),
-            NSLayoutConstraint(item: self.phoneNumberLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 64.0),
+            NSLayoutConstraint(item: self.phoneNumberLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 64.0).priority(.defaultHigh),
             NSLayoutConstraint(item: self.phoneNumberLabel, attribute: .top, relatedBy: .equal, toItem: self.view.safeAreaLayoutGuide, attribute: .top, multiplier: 1.0, constant: 8.0),
             NSLayoutConstraint(item: self.phoneNumberLabel, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
             ])
@@ -127,5 +141,25 @@ extension DialViewController {
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+    }
+}
+
+extension DialViewController {
+    private func layoutDeleteButton() {
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self.deleteButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize),
+            NSLayoutConstraint(item: self.deleteButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize),
+            NSLayoutConstraint(item: self.deleteButton, attribute: .centerY, relatedBy: .equal, toItem: self.callButton, attribute: .centerY, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: self.deleteButton, attribute: .left, relatedBy: .equal, toItem: self.callButton, attribute: .right, multiplier: 1.0, constant: margin)
+            ])
+    }
+    
+    @objc private func handle(deleteButton: UIButton) {
+        guard var phoneNumber: String = self.phoneNumberLabel.text, !phoneNumber.isEmpty else {
+            return
+        }
+        
+        phoneNumber.remove(at: phoneNumber.index(phoneNumber.endIndex, offsetBy: -1))
+        self.phoneNumberLabel.text = phoneNumber
     }
 }
