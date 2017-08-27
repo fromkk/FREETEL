@@ -11,7 +11,7 @@ import UIKit
 class DialViewController: UIViewController {
     
     private let margin: CGFloat = 32.0
-    private lazy var buttonSize: CGFloat = (320.0 - (margin * 4.0)) / 3.0
+    private lazy var buttonSize: CGFloat = (UIScreen.main.bounds.size.width - (margin * 4.0)) / 3.0
     
     lazy var phoneNumberLabel: UILabel = { () -> UILabel in
         let label: UILabel = UILabel()
